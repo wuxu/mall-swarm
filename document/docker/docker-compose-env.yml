@@ -16,7 +16,7 @@ services:
   redis:
     image: redis:5
     container_name: redis
-    command: redis-server --appendonly yes
+    command: redis-server --requirepass 123456 --appendonly yes
     volumes:
       - /mydata/redis/data:/data #数据文件挂载
     ports:
